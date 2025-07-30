@@ -31,15 +31,11 @@ def push_code():
 
     if repo.is_dirty():
         diff = get_git_diff(repo)
-        commit_message = generate_commit_message(diff)
-
-        repo.index.commit(commit_message)
         origin = repo.remote(name='origin')
         origin.push()
-        print(f"✅ Code pushed with message: {commit_message}")
+        print("Code pushed")
     else:
-        print("📁 No changes to commit.")
-
+        print("No changes to commit.")
 
 if __name__ == "__main__":
     push_code()
