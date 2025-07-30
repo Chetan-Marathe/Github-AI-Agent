@@ -1,0 +1,4 @@
+{
+  "repo_path": "/your/local/repo/path",
+  "ollama_model": "tinyllama"
+}
